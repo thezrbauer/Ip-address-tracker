@@ -1,0 +1,27 @@
+{
+  "name": "ip-address-tracker",
+  "version": "1.0.0",
+  "description": "![Design preview for the IP address tracker coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwind build src/tailwind.css -o public/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thezrbauer/Ip-address-tracker.git"
+  },
+  "author": "Zachary Bauer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thezrbauer/Ip-address-tracker/issues"
+  },
+  "homepage": "https://github.com/thezrbauer/Ip-address-tracker#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.7",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.17"
+  }
+}
