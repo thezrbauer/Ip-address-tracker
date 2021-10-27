@@ -3,32 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="public/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
   <script src="public/script.js"></script>
   <title>Frontend Mentor | IP Address Tracker</title>
 </head>
-<body>
-<section> 
-  <!-- the top half and the content -->
-<h1 class="">IP Address Tracker</h1>
-<Form>
-  <input aria-label="Close" type="search" placeholder="Type in any IP address"> 
-<ul>
- <li>IP Address</li> 
-  <li>Location</li>
-  <li> Timezone</li>
-  <li> UTC <!-- add offset value dynamically using the API --></li>
-  <li> ISP</li>
+
+
+
+<body class="font-rubik ">
+<div class="flex bg-pattern-pb justify-center relative" >
+<form>
+<div class=" m-5 h-40 ">
+ <h1 class="text-2xl  text-White ml-28">IP Address Tracker</h1>
+ <div class="flex flex-row m-5 w-full " >
+ <input aria-label="Close" class=" bg-White w-96 rounded-l-xl cursor-pointer pl-4" type="search" placeholder="Type in any IP address"> 
+ <button class="bg-VeryDarkGray p-4 rounded-r-xl cursor-pointer">
+  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
+ </button>
+</div>
+</div>
+<div class=" h-32 w-auto -ml-5 flex d shadow-lg -mt-12 rounded-2xl absolute bg-White  ">
+ <ul class="grid grid-cols-5 grid-rows-2 m-5 justify-center items-center">
+  <li class="m-3">
+    <p>IP Address</p>
+    <p class="content"></p>
+  </li> 
+  <li class="m-3">
+    <p>Location</p>
+    <p class="content"></p>
+  </li>
+  <li class="m-3"> 
+    <p>Timezone</p>
+    <p class="content"></p>
+  </li>
+  <li class="m-3"> 
+    <p>UTC</p> <!-- add offset value dynamically using the API -->
+    <p class="content"></p>
+  </li>
+  <li class="m-3"> 
+    <p>ISP</p>
+    <p class="content"></p>
+
+  </li>
 </ul>
+</div>
 </form>
-</section>
+</div> 
 <div>
-  <!-- for the background on the lower half -->
+  <div id="mapid" class="h-80"></div> <!-- for the background on the lower half -->
 </div>
 
 
-  </div>
+ 
 </body>
 </html>

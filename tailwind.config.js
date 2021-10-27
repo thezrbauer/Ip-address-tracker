@@ -2,6 +2,12 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    extend: {
+      backgroundImage: {
+
+       'pattern-pb': "url('/images/pattern-bg.png')",
+      }
+    },
     colors: { 
       transparent: 'transparent',
       current: 'currentColor',
