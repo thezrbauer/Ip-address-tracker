@@ -12,50 +12,48 @@
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
   crossorigin=""></script>
-  <script src="public/script.js"></script>
+  <script src="public/script.js" defer></script>
+  <script src="index.js"></script>
   <title>Frontend Mentor | IP Address Tracker</title>
 </head>
 
 
 
 <body class="font-rubik ">
-<div class="flex bg-pattern-pb justify-center relative" >
-<form>
-<div class=" m-5 h-40 ">
- <h1 class="text-2xl  text-White ml-28">IP Address Tracker</h1>
- <div class="flex flex-row m-5 w-full " >
- <input aria-label="Close" class=" bg-White w-96 rounded-l-xl cursor-pointer pl-4" type="search" placeholder="Type in any IP address"> 
- <button class="bg-VeryDarkGray p-4 rounded-r-xl cursor-pointer">
+<div class="flex bg-pattern-pb justify-center " >
+<div class="w-3/5 relative">
+<div class=" mt-8 h-52  md:w-3/5 mr-auto ml-auto  text-center">
+ <h1 class="text-2xl  text-White ">IP Address Tracker</h1>
+ <form class="flex flex-row mt-5 mx-2 w-full" id="form" >
+  <input aria-label="Search input" id="formInput" class="formInput -ml-1 bg-White w-full rounded-l-xl cursor-pointer pl-4" type="text" name="ip-search" placeholder="Type in any IP address"> 
+  <button aria-label="submit button" id="" class="button bg-VeryDarkGray p-4 rounded-r-xl cursor-pointer" >
   <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
- </button>
+  </button>
+ </form>
 </div>
-</div>
-<div class=" h-32 w-auto -ml-5 flex d shadow-lg -mt-12 rounded-2xl absolute bg-White  ">
- <ul class="grid grid-cols-5 grid-rows-2 m-5 justify-center items-center">
-  <li class="m-3">
-    <p>IP Address</p>
-    <p class="content"></p>
-  </li> 
-  <li class="m-3">
-    <p>Location</p>
-    <p class="content"></p>
-  </li>
-  <li class="m-3"> 
-    <p>Timezone</p>
-    <p class="content"></p>
-  </li>
-  <li class="m-3"> 
-    <p>UTC</p> <!-- add offset value dynamically using the API -->
-    <p class="content"></p>
-  </li>
-  <li class="m-3"> 
-    <p>ISP</p>
-    <p class="content"></p>
 
-  </li>
-</ul>
+<div class=" h-96 w-full md:h-40 -mt-24 md:-mt-20  flex   md:p-4 shadow-lg  rounded-2xl absolute bg-White mr-auto ml-auto  ">
+ <div class="grid w-full md:grid-cols-4  md:space-x-5 p-3 m-1  text-DarkGray text-xs font-medium text-center">
+  <div id="ip" class="info m-2">
+    <h5>IP ADDRESS</h5>
+    <h3  class="content text-VeryDarkGray text-2xl p-2"></h3>
+  </div> 
+  <div id="location"  class="info m-2">
+    <h5>LOCATION</h5>
+    <h3 class="content text-VeryDarkGray text-2xl  pt-2 "></h3>
+  </div>
+  <div id="timezone" class="info m-2"> 
+    <h5>TIMEZONE</h5>
+    <h3  class=" content text-VeryDarkGray text-2xl pt-2 "></h3>
+  </div>
+  <div id="something" class="info m-2"> 
+    <h5>ISP</h5>
+    <h3  class=" content text-VeryDarkGray text-2xl pt-2 "></h3>
+
+  </div>
 </div>
-</form>
+</div>
+</div>
 </div> 
 <div>
   <div id="mapid" class="h-80"></div> <!-- for the background on the lower half -->
