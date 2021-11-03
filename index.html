@@ -21,22 +21,26 @@
 
 <body class="font-rubik ">
 <div class="flex bg-pattern-pb justify-center " >
-<div class="w-3/5 relative">
-<div class=" mt-8 h-52  md:w-3/5 mr-auto ml-auto  text-center">
- <h1 class="text-2xl  text-White ">IP Address Tracker</h1>
+<div class="w-full mx-14 sm:mx-32 relative">
+  
+<header class=" mt-8 h-52  w-auto md:w-3/5 mr-auto ml-auto  text-center z-10">
+ <h1 class="text-xl sm:text-3xl   text-White ">IP Address Tracker</h1>
  <form class="flex flex-row mt-5 mx-2 w-full" id="form" >
-  <input aria-label="Search input" id="formInput" class="formInput -ml-1 bg-White w-full rounded-l-xl cursor-pointer pl-4" type="text" name="ip-search" placeholder="Type in any IP address"> 
-  <button aria-label="submit button" id="" class="button bg-VeryDarkGray p-4 rounded-r-xl cursor-pointer" >
+  <input aria-label="Search input" id="formInput" class="formInput w-full -ml-1 bg-White  rounded-l-xl cursor-pointer pl-3" type="text" name="ip-search" placeholder="Type in any IP address"> 
+  <button aria-label="submit button" id="" class="button bg-VeryDarkGray p-4 mr-2 rounded-r-xl cursor-pointer" >
   <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
   </button>
  </form>
-</div>
+</header>
 
-<div class=" h-96 w-full md:h-40 -mt-24 md:-mt-20  flex   md:p-4 shadow-lg  rounded-2xl absolute bg-White mr-auto ml-auto  ">
- <div class="grid w-full md:grid-cols-4  md:space-x-5 p-3 m-1  text-DarkGray text-xs font-medium text-center">
-  <div id="ip" class="info m-2">
+
+
+
+<section class=" h-96 w-full md:h-40 -mt-24 md:-mt-20  flex   md:p-4 shadow-lg  rounded-2xl absolute bg-White mr-auto ml-auto z-10 ">
+ <div class="grid w-full md:grid-cols-4  md:space-x-5 p-3 m-1  text-DarkGray text-xs font-medium text-center ">
+  <div id="ip" class="info m-2 ">
     <h5>IP ADDRESS</h5>
-    <h3  class="content text-VeryDarkGray text-2xl p-2"></h3>
+    <h3  class="content text-VeryDarkGray  text-2xl pt-2"></h3>
   </div> 
   <div id="location"  class="info m-2">
     <h5>LOCATION</h5>
@@ -52,14 +56,15 @@
 
   </div>
 </div>
-</div>
+</section>
+
+
+
 </div>
 </div> 
 <div>
-  <div id="mapid" class="h-80"></div> <!-- for the background on the lower half -->
-</div>
+  <div id="map" class="h-screen w-full  z-0"></div>
+  </div>
 
-
- 
 </body>
 </html>
