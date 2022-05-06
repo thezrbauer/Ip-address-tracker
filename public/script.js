@@ -1,4 +1,4 @@
-
+// Hiding the Api key was not necessary for this project => FrontEnd Mentor README.md.
 
 const source = 'https://geo.ipify.org/api/v1?apiKey=at_wT9qMF2XMOaUjbYGkPuZ4RA6FGYyM'
 const inputContent = document.querySelector(".formInput");
@@ -6,7 +6,9 @@ const submitBtn = document.querySelector('.button');
 const ipData = document.querySelector("#ip").querySelector(".content");
 const locationData = document.querySelector("#location").querySelector(".content");
 const timezoneData = document.querySelector("#timezone").querySelector(".content");
-const ispData = document.querySelector("#something").querySelector(".content");
+const ispData = document.querySelector("#isp").querySelector(".content");
+
+// Leaflet content
 const mapContainer = document.querySelector("#map");
 const map = L.map(mapContainer).setView([0,0], 15);
 const tileURL = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
@@ -14,9 +16,10 @@ const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">Op
 const tiles = L.tileLayer(tileURL, { attribution }).addTo(map);
 const locationMarker = L.icon({
     iconUrl: "/images/icon-location.svg",
-    iconSize: [46, 56],
+    iconSize: [48, 58],
 });
 
+// Calls for clients IP address
 async function clientIP() {
     const response = await fetch('https://api64.ipify.org?format=json');
     const data = await response.json();
@@ -29,6 +32,7 @@ async function clientIP() {
 
 clientIP();
 
+// Acquires the input data from the onClick event. 
 submitBtn.addEventListener("click", e => {
     e.preventDefault();
 
